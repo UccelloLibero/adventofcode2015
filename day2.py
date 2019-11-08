@@ -9,6 +9,19 @@
 # A present with dimensions 1x1x10 requires 2*1 + 2*10 + 2*10 = 42 square feet of wrapping paper plus 1 square foot of slack, for a total of 43 square feet.
 # All numbers in the elves' list are in feet. How many total square feet of wrapping paper should they order?
 
+input_text = open("input.txt", "r").read()
+
+verbose = False
+
+total_paper = 0
+for line in input_text:
+    if verbose:
+        print("line:", line)
+    l, w, d = line.split('x')
+    l, w, d = int(l), int(w), int(d)
+    if verbose:
+        print("Dimensions:", l, w, d)
+
 
 def wrapping_paper(length, width, height):
     l = 0
